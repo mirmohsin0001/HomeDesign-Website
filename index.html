@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeDesigns</title>
     <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
 
   <body>
@@ -21,10 +22,29 @@
             <li>clients</li>
             <li>about</li>
             <li>
-              <button>contact us</button>
+              <button><a href="#">contact us</a></button>
             </li>
           </ul>
         </nav>
+
+        <div onclick="toggleMenu()" class="menu-icon">
+          <i class='bx bx-menu'></i>
+        </div>
+
+
+        <!-- DROPDOWN -->
+        <div class="dropdown">
+          <ul>
+            <li>services</li>
+            <li>projects</li>
+            <li>clients</li>
+            <li>about</li>
+            <li>
+              <button><a href="#">contact us</a></button>
+            </li>
+          </ul>
+
+        </div>
 
       </header>
 
@@ -45,4 +65,33 @@
       <section class="services"></section>
     </main>
   </body>
+
+  <script>
+    function toggleMenu(){
+      var state = "active";
+      const dropdown = document.querySelector(".dropdown");
+
+      // if(state!="active"){
+      //   dropdown.style.display = "flex";
+      //   state = "inactive";
+      //   console.log("inside if clause");
+        
+      // }else{
+      //   dropdown.style.display = "none";
+      //   state = "active";     
+      //   console.log("inside else clause");
+      // }
+
+      if(dropdown.style.display == "flex"){
+        dropdown.style.display = "none";
+      }
+      else{
+        dropdown.style.display = "flex";
+
+      }
+
+
+    }
+  </script>
+
 </html>
