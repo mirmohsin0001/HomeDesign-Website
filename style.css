@@ -12,6 +12,49 @@ body {
   font-family: monospace;
 }
 
+/* BUTTONS */
+button {
+  border: none;
+  padding: 10px 15px;
+  background: #9fef00;
+}
+
+button a {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-family: monospace;
+  color: #fafafa;
+}
+
+button:hover {
+  background: #93ce1e;
+}
+/* END */
+
+/* CONTAINERS */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* END */
+
 .logo {
   font-size: 1.5rem;
   font-style: italic;
@@ -22,16 +65,12 @@ header {
   display: flex;
   align-items: center;
   color: white;
-  /* font-family: monospace; */
   font-weight: bold;
+  font-size: 1rem;
   text-transform: uppercase;
-  padding: 10px 5%;
+  padding: 20px 5%;
   justify-content: space-between;
   position: relative;
-}
-
-nav {
-  margin-left: auto;
 }
 
 nav ul {
@@ -40,27 +79,6 @@ nav ul {
   gap: 20px;
   list-style: none;
   margin-left: auto;
-}
-
-header button {
-  /* border-radius: 5px; */
-  border: none;
-  padding: 10px 15px;
-  background: #9fef00;
-  border-radius: 5px;
-
-}
-
-nav button a{
-    text-transform: capitalize;
-    font-weight: bold;
-    font-family: monospace;
-    color: #333;
-
-}
-
-header button:hover {
-  background: #93ce1e;
 }
 
 /* HERO-SECTION */
@@ -90,27 +108,22 @@ header button:hover {
   position: relative;
   z-index: 1;
   color: #333;
-  max-width: 80%;
+  max-width: 90%;
   margin-top: 120px;
   margin-left: 100px;
   text-transform: capitalize;
 }
 
-.content button {
-  border: none;
-  padding: 10px 15px;
-  background: #9fef00;
-  color: black;
+.content h1 {
+  margin-bottom: 10px;
   font-weight: 700;
-  margin-top: 10px;
-  border-radius: 5px;
-  text-transform: capitalize;
 }
 
 .about {
-  padding: 20px 20px;
+  margin-top: 50px;
   color: white;
 }
+
 .about p {
   color: #c2c2c2;
 }
@@ -120,13 +133,13 @@ header button:hover {
   display: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .content {
     text-align: center;
     margin-top: 10vh;
     margin-left: auto;
     margin-right: auto;
-    font-size: 0.5rem;
+    font-size: 0.9rem;
   }
   .hero-section {
     height: 60vh;
@@ -139,7 +152,8 @@ header button:hover {
     display: block;
   }
 
-  nav {
+  nav,
+  header > button {
     display: none;
   }
 
@@ -152,7 +166,7 @@ header button:hover {
     z-index: 100;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(50px);
-    padding: 10px;
+    padding: 20px;
     width: 100%;
     align-items: center;
     text-align: center;
@@ -160,12 +174,6 @@ header button:hover {
   }
 
   .dropdown li {
-    margin-top: 15px;
-  }
-
-  .dropdown button {
-    font-weight: 700;
-    font-family: monospace;
-    color: #333;
+    margin: 15px 0 15px 0;
   }
 }

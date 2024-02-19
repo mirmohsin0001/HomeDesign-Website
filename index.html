@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeDesigns</title>
     <link rel="stylesheet" href="style.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -21,16 +24,14 @@
             <li>projects</li>
             <li>clients</li>
             <li>about</li>
-            <li>
-              <button><a href="#">contact us</a></button>
-            </li>
           </ul>
         </nav>
 
-        <div onclick="toggleMenu()" class="menu-icon">
-          <i class='bx bx-menu'></i>
-        </div>
+        <button><a href="#">contact us</a></button>
 
+        <div onclick="toggleMenu()" class="menu-icon">
+          <i class="bx bx-menu"></i>
+        </div>
 
         <!-- DROPDOWN -->
         <div class="dropdown">
@@ -43,55 +44,44 @@
               <button><a href="#">contact us</a></button>
             </li>
           </ul>
-
         </div>
-
       </header>
 
       <!-- HERO-SECTION -->
       <section class="hero-section">
         <div class="background-overlay"></div>
         <div class="content">
-          <h1>elevating dreams, <span class="green">crafting masterpieces</span>: your vision, our expertise!</h1>
-          <button>more</button>
+          <h1>
+            elevating dreams, <span class="green">crafting masterpieces</span>:
+            your vision, our expertise!
+          </h1>
+          <button><a href="#">explore</a></button>
         </div>
       </section>
 
-
-      <section class="about">
+      <section class="about container">
         <h1>About Us</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita facere molestias saepe dolorum aspernatur praesentium commodi quos dolores beatae quae a, eius ex nisi earum nemo esse corporis perferendis voluptate.</p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita
+          facere molestias saepe dolorum aspernatur praesentium commodi quos
+          dolores beatae quae a, eius ex nisi earum nemo esse corporis
+          perferendis voluptate.
+        </p>
       </section>
       <section class="services"></section>
     </main>
   </body>
 
   <script>
-    function toggleMenu(){
+    function toggleMenu() {
       var state = "active";
       const dropdown = document.querySelector(".dropdown");
 
-      // if(state!="active"){
-      //   dropdown.style.display = "flex";
-      //   state = "inactive";
-      //   console.log("inside if clause");
-        
-      // }else{
-      //   dropdown.style.display = "none";
-      //   state = "active";     
-      //   console.log("inside else clause");
-      // }
-
-      if(dropdown.style.display == "flex"){
+      if (dropdown.style.display == "flex") {
         dropdown.style.display = "none";
-      }
-      else{
+      } else {
         dropdown.style.display = "flex";
-
       }
-
-
     }
   </script>
-
 </html>
